@@ -13,21 +13,30 @@ module.exports = {
       },
       colors: {
         "black-100": "#2B2C35",
-        "primary-blue": {
-          DEFAULT: "#2B59FF",
-          100: "#F5F8FF",
+        "primary-millet": {
+          DEFAULT: "#E6D3B6",
+          100: "#fcfbf8",
+          200: "#f2e0c4",
         },
-        "secondary-orange": "#f79761",
+        "primary-wheat": "#EAD2AC",
         "light-white": {
           DEFAULT: "rgba(59,60,152,0.03)",
           100: "rgba(59,60,152,0.02)",
         },
+        "primary-brown": "#7C5548",
+        "primary-sand": "#DFCAC2",
+        "primary-coral": {
+          DEFAULT: "#DF928E",
+          100: "#fcf4f4",
+          200: "#f9e9e8",
+        },
+        "primary-rose": "#C58882",
         grey: "#747A88",
       },
       backgroundImage: {
-        'pattern': "url('/pattern.png')",
-        'hero-bg': "url('/hero-bg.png')"
-      }
+        pattern: "url('/pattern.png')",
+        "hero-bg": "url('/hero-bg.svg')",
+      },
     },
   },
   plugins: [],
