@@ -1,3 +1,5 @@
+import { animate, stagger } from "framer-motion";
+
 export const riseWithFade = {
   initial: {
     y: 100,
@@ -26,6 +28,28 @@ export const videoAnimation = {
     transition: {
       ease: [0.6, 0.01, 0.06, 0.95],
       duration: 1.3,
+    },
+  },
+};
+
+export const staggerChildren = {
+  animate: {
+    transition: {
+      delayChildren: 0.4,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+export const wordAnimation = {
+  initial: {
+    y: 100,
+  },
+  animate: {
+    y: 10,
+    transition: {
+      ease: [0.6, 0.01, 0.06, 0.95],
+      duration: 1,
     },
   },
 };
