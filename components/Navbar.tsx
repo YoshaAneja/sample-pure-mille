@@ -12,7 +12,7 @@ const Navbar = () => {
           <Image
             src="/logo.png"
             alt="Pure Mille Logo"
-            width={118}
+            width={150}
             height={18}
             className="object-contain"
           />
@@ -20,7 +20,7 @@ const Navbar = () => {
         <CustomButton
           title="our catalogue"
           btnType="button"
-          containerStyles="text-primary-brown rounded-full bg-white min-w-[130px]"
+          containerStyles="text-primary-brown rounded-full  bg-primary-millet-200 min-w-[130px]"
         />
       </nav>
     </header>

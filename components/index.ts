@@ -9,6 +9,7 @@ import SearchType from "./SearchType";
 import ProductCard from "./ProductCard";
 import ProductDetails from "./ProductDetails";
 import ShowMore from "./ShowMore";
+import SplashScreen from "./SplashScreen";
 
 export {
   Hero,
@@ -22,4 +23,5 @@ export {
   ProductDetails,
   CustomToggle,
   ShowMore,
+  SplashScreen,
 };
