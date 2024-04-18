@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 import { MilletProps, ProductProps } from "@/types";
-import CustomButton from "./CustomButton";
 import ProductDetails from "./ProductDetails";
+import CustomButtonStatic from "./CustomButtonStatic";
 
 interface ProductCardProps {
   product: ProductProps;
@@ -63,7 +63,7 @@ const ProductCard = ({ product, milletType }: ProductCardProps) => {
         </div>
 
         <div className="product-card__btn-container">
-          <CustomButton
+          <CustomButtonStatic
             title="View More"
             containerStyles="w-full py-[16px] rounded-full bg-primary-brown"
             textStyles="text-white text-[14px] leading-[17px] font-bold"

@@ -10,7 +10,9 @@ import ProductCard from "./ProductCard";
 import ProductDetails from "./ProductDetails";
 import ShowMore from "./ShowMore";
 import SplashScreen from "./SplashScreen";
-
+import RecipeCard from "./RecipeCard";
+import RecipeDetails from "./RecipeDetails";
+import CustomButtonStatic from "./CustomButtonStatic";
 export {
   Hero,
   CustomButton,
@@ -24,4 +26,7 @@ export {
   CustomToggle,
   ShowMore,
   SplashScreen,
+  RecipeCard,
+  RecipeDetails,
+  CustomButtonStatic,
 };

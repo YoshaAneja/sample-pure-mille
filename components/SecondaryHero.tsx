@@ -47,7 +47,7 @@ const SecondaryHero = ({
               />
             )}
           </div>
-          {image && (
+          {/* {image && (
             <div className="relative w-[100%] md:h-[600px] flex flex-col">
               <motion.img
                 src={`/${image}`}
@@ -57,7 +57,7 @@ const SecondaryHero = ({
                 variants={videoAnimation}
               />
             </div>
-          )}
+          )} */}
         </div>
       </motion.div>
     </>

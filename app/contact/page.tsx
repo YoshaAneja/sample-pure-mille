@@ -1,9 +1,16 @@
 "use client";
 import SecondaryHero from "@/components/SecondaryHero";
-import React, { FormEvent, useState } from "react";
+import React, { FormEvent, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+
 import emailjs from "@emailjs/browser";
-import { CustomButton } from "@/components";
+
+interface FormInputs {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
 
 export default function ContactUs() {
   const [name, setName] = useState("");
@@ -12,9 +19,13 @@ export default function ContactUs() {
   const [message, setMessage] = useState("");
   const {
     register,
+    handleSubmit,
     reset,
     formState: { errors },
-  } = useForm();
+  } = useForm<FormInputs>({
+    criteriaMode: "all",
+  });
+
   const [disabled, setDisabled] = useState(false);
   const [alertInfo, setAlertInfo] = useState({
     display: false,
@@ -32,8 +43,7 @@ export default function ContactUs() {
     }, 5000);
   };
 
-  const onSubmit = async (e: FormEvent) => {
-    e.preventDefault();
+  const onSubmit = async (data: FormInputs) => {
     console.log("Data", name, email, subject, message);
     try {
       // Disable form while processing submission
@@ -61,7 +71,10 @@ export default function ContactUs() {
         );
 
       // Display success alert
-      toggleAlert("Form submission was successful!", "success");
+      toggleAlert(
+        "Your message has been sent! We'll get back to you soon!",
+        "success"
+      );
     } catch (e) {
       console.error(e);
       // Display error alert
@@ -70,7 +83,12 @@ export default function ContactUs() {
       // Re-enable form submission
       setDisabled(false);
       // Reset contact form fields after submission
-      reset();
+      reset({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
     }
   };
   return (
@@ -93,14 +111,17 @@ export default function ContactUs() {
             border: "0",
           }}
         ></iframe>
-        <form onSubmit={onSubmit} id="contact-form" className="contact-form">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          id="contact-form"
+          className="contact-form"
+        >
           <div className="contact-form__heading">Get in touch</div>
           <div className="contact-form__row">
             <input
               className="contact-form__row-child"
               type="text"
               placeholder="Name"
-              value={name}
               {...register("name", {
                 required: {
                   value: true,
@@ -111,40 +132,86 @@ export default function ContactUs() {
                   message: "Please use 30 characters or less",
                 },
               })}
+              value={name}
               onChange={(e) => setName(e.target.value)}
             />
+            {errors.name && (
+              <span className="error-message">{errors.name.message}</span>
+            )}
           </div>
           <div className="contact-form__row">
             <input
               className="contact-form__row-child"
               type="email"
+              {...register("email", {
+                required: true,
+                pattern:
+                  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+              })}
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
+            {errors.email && (
+              <span className="error-message">
+                Please enter a valid email address
+              </span>
+            )}
           </div>
           <div className="contact-form__row">
             <input
               className="contact-form__row-child"
               type="text"
               placeholder="Subject"
+              {...register("subject", {
+                required: {
+                  value: true,
+                  message: "Please enter a subject",
+                },
+                maxLength: {
+                  value: 75,
+                  message: "Subject cannot exceed 75 characters",
+                },
+              })}
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
             />
+            {errors.subject && (
+              <span className="error-message">{errors.subject.message}</span>
+            )}
           </div>
           <div className="contact-form__row">
             <textarea
               className="contact-form__row-child"
               value={message}
+              placeholder="Message"
+              {...register("message", {
+                required: {
+                  value: true,
+                  message: "Please enter a message",
+                },
+              })}
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
+            {errors.message && (
+              <span className="error-message">{errors.message.message}</span>
+            )}
           </div>
-          <CustomButton
-            title="Submit"
-            btnType="submit"
-            containerStyles="p-[16px] w-full border border-primary-brown bg-primary-brown text-primary-wheat-100 font-bold text-lg rounded-full hover:bg-primary-wheat-100 hover:text-primary-brown transition-all duration-500"
-          />
+          <button
+            type="submit"
+            className="p-[16px] w-full border border-primary-brown bg-primary-brown text-primary-wheat-100 font-bold text-lg rounded-full hover:bg-primary-wheat-100 hover:text-primary-brown transition-all duration-500 flex-1"
+          >
+            Submit
+          </button>
         </form>
+        {alertInfo.display && (
+          <div
+            className="transition-all text-center font-bold text-primary-brown"
+            role="alert"
+          >
+            {alertInfo.message}
+          </div>
+        )}
       </div>
     </main>
   );

@@ -18,7 +18,7 @@ const SplashScreen = ({ children }) => {
         width={300}
         height={300}
         alt="Pure Mille"
-        // unoptimized={true}
+        unoptimized
       />
     </div>
   );

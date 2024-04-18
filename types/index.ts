@@ -32,9 +32,20 @@ export interface ProductProps {
   price: number;
 }
 
+export interface RecipeProps {
+  title: string;
+  gluten_free: string;
+  body: string;
+  recipe_millet: string;
+  ingredients: Array<string>;
+  cooking_time: string;
+  primary_image: string;
+  secondary_images: Array<string>;
+}
+
 export interface MilletProps {
-  millet_type: string;
-  millet_description: string;
+  millet_type?: string;
+  millet_description?: string;
 }
 
 export interface FilterProps {
@@ -66,4 +77,10 @@ export interface SecondaryHeroProps {
   imageAlt?: string;
   scrollToID?: string;
   buttonText?: string;
+}
+
+export interface FilterPropsRecipes {
+  recipe_millet?: string;
+  title?: string;
+  gluten_free?: string;
 }

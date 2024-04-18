@@ -1,4 +1,9 @@
-import { FilterProps, MilletProps, ProductProps } from "@/types";
+import {
+  FilterProps,
+  FilterPropsRecipes,
+  MilletProps,
+  ProductProps,
+} from "@/types";
 
 const axios = require("axios");
 
@@ -72,6 +77,41 @@ export async function fetchMillets(millet_type: string) {
   };
   try {
     const response = await axios.request(milletOptions);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function fetchRecipes(recipeFilters: FilterPropsRecipes) {
+  const { recipe_millet, title, gluten_free } = recipeFilters;
+  var recipeData = {};
+
+  recipeData = {
+    collection: "recipes",
+    database: "sample_millets",
+    dataSource: "PureMille",
+    filter: {
+      recipe_millet: recipe_millet,
+      title: title,
+      gluten_free: gluten_free,
+    },
+    projection: {},
+  };
+
+  const recipeOptions = {
+    method: "POST",
+    url: "https://us-east-1.aws.data.mongodb-api.com/app/data-dynni/endpoint/data/v1/action/find",
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Request-Headers": "*",
+      "api-key":
+        "Cc2O1lxuiw2uFFeRXImG8VOYhWv104DWnNf3GJfDijHVg2FSVm5mrwRlD3nXlX9A",
+    },
+    data: JSON.stringify(recipeData),
+  };
+  try {
+    const response = await axios.request(recipeOptions);
     return response.data;
   } catch (error) {
     console.log(error);

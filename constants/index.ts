@@ -43,6 +43,21 @@ export const types = [
   "Proso (Chena/Barri)",
 ];
 
+export const typesSecondary = [
+  { title: "Pearl (Bajra)", value: 1 },
+  { title: "Sorghum (Jowar)", value: 2 },
+  { title: "Foxtail (Kakum/Kangni)", value: 3 },
+  { title: "Finger (Ragi)", value: 4 },
+  { title: "Fonio", value: 5 },
+  { title: "Browntop (Korle)", value: 6 },
+  { title: "Little (Moraiyo)", value: 7 },
+  { title: "Buckwheat (Kuttu)", value: 8 },
+  { title: "Amaranth (Rajgira)", value: 9 },
+  { title: "Kodo", value: 10 },
+  { title: "Barnyard (Sanwa)", value: 11 },
+  { title: "Proso (Chena/Barri)", value: 12 },
+];
+
 export const products = ["Cereal", "Pasta", "Gluten Free Grains", "Pancakes"];
 
 export const priceRanges = [

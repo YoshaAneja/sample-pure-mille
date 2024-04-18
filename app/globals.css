@@ -39,7 +39,7 @@
 
 /* START: Hero styles */
 .hero {
-  @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
+  @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto md:pt-[40px];
 }
 
 .hero__title {
@@ -131,6 +131,52 @@
   @apply hidden group-hover:flex absolute bottom-0 w-full z-10;
 }
 /* END: Product Card styles */
+
+/* START: Recipe Card styles */
+.recipe-card {
+  @apply flex flex-col p-6 justify-center items-start text-black-100 bg-primary-coral-100 hover:bg-white hover:shadow-md rounded-3xl transition-all duration-500;
+}
+
+.recipe-card__content {
+  @apply w-full flex justify-between items-start gap-2;
+}
+
+.recipe-card__content-title {
+  @apply text-[22px] leading-[26px] font-bold capitalize;
+}
+
+.recipe-card__price {
+  @apply flex mt-6 text-[32px] leading-[38px] font-extrabold;
+}
+
+.recipe-card__price-dollar {
+  @apply self-start text-[14px] leading-[17px] font-semibold;
+}
+
+.recipe-card__price-day {
+  @apply self-end text-[14px] leading-[17px] font-medium;
+}
+
+.recipe-card__image {
+  @apply relative w-full h-40 my-3 object-contain;
+}
+
+.recipe-card__icon-container {
+  @apply flex w-full justify-between text-grey;
+}
+
+.recipe-card__icon {
+  @apply flex flex-col justify-center items-center gap-2;
+}
+
+.recipe-card__icon-text {
+  @apply text-[14px] leading-[17px];
+}
+
+.recipe-card__btn-container {
+  @apply flex relative bottom-0 w-full z-10 transition-all duration-500  hover:shadow-xl;
+}
+/* END: Recipe Card styles */
 
 /* START: Custom Filter styles */
 .custom-filter__btn {
@@ -224,15 +270,15 @@
 
 /* Start: Contact Form Styles */
 .contact-form-div {
-  @apply flex md:justify-end justify-center align-middle my-[60px] items-center max-sm:flex-col max-sm:gap-[50px] max-sm:p-[30px];
+  @apply flex md:justify-end justify-center align-middle my-[60px] items-center max-sm:flex-col max-sm:gap-[50px] max-sm:p-[30px] max-sm:mx-[30px];
 }
 
 .contact-form-div__map {
-  @apply absolute md:float-right clear-both w-screen h-[550px] z-0 rounded-md max-sm:relative max-sm:h-[200px];
+  @apply absolute md:float-right clear-both w-screen h-[550px] z-0 rounded-md max-sm:relative max-sm:h-[200px] max-sm:w-[90vw];
 }
 
 .contact-form {
-  @apply z-10 flex bg-primary-millet-100 flex-col w-[550px]  align-middle shadow-md rounded-3xl gap-8 md:mr-[30px] p-16 max-md:max-w-[400px] max-sm:w-[280px];
+  @apply z-0 flex bg-primary-millet-100 flex-col w-[550px]  align-middle shadow-md rounded-3xl gap-8 md:mr-[30px] p-16 max-md:max-w-[450px] max-sm:w-[90vw];
 }
 .contact-form__heading {
   @apply text-primary-brown font-extrabold text-left text-4xl;
@@ -242,6 +288,9 @@
 }
 
 .contact-form__row-child {
-  @apply w-full py-[20px] px-[24px] resize-y text-primary-brown bg-primary-wheat-200 rounded-full border border-primary-brown;
+  @apply w-full py-[20px] px-[24px] resize-y text-primary-brown bg-primary-wheat-200 rounded-full border border-primary-brown-500 placeholder-primary-brown-500;
+}
+.error-message {
+  @apply text-sm text-primary-brown;
 }
 /* END: Contact Form Styles */

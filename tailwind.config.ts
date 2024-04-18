@@ -27,7 +27,7 @@ module.exports = {
           DEFAULT: "rgba(59,60,152,0.03)",
           100: "rgba(59,60,152,0.02)",
         },
-        "primary-brown": "#7C5548",
+        "primary-brown": { DEFAULT: "#7C5548", 500: "#a3887e" },
         "primary-sand": "#DFCAC2",
         "primary-coral": {
           DEFAULT: "#DF928E",

@@ -10,6 +10,8 @@ import {
   videoAnimation,
   wordAnimation,
 } from "@/utils/animations";
+import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 const Hero = () => {
   const handleScroll = () => {
     const nextSection = document.getElementById("products");
@@ -36,7 +38,7 @@ const Hero = () => {
               handleClick={handleScroll}
             />
           </div>
-          <div className="leading-[150%] lg:max-w-[450px] max-w-[320px] min-w-[250px] hero__subtitle md:self-end">
+          <div className="leading-[150%] lg:max-w-[450px] md:max-w-[330px] max-w-[100vw] min-w-[250px] hero__subtitle md:self-end">
             {/* a pure millet company dedicated to sustainable nutrition */}
             <AnimatedWords title="harvesting health, sowing sustainability." />
             <br />
