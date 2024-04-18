@@ -3,7 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import { CustomButtonProps } from "@/types";
-
+import { motion } from "framer-motion";
+import { buttonAnimation } from "@/utils/animations";
 const CustomButton = ({
   title,
   btnType,
@@ -13,11 +14,14 @@ const CustomButton = ({
   handleClick,
 }: CustomButtonProps) => {
   return (
-    <button
+    <motion.button
       disabled={false}
       type={btnType || "button"}
       className={`custom-btn ${containerStyles}`}
       onClick={handleClick}
+      initial="initial"
+      animate="animate"
+      variants={buttonAnimation}
     >
       <span className={`flex-1 ${textStyles}`}>{title}</span>
       {rightIcon && (
@@ -30,7 +34,7 @@ const CustomButton = ({
           />
         </div>
       )}
-    </button>
+    </motion.button>
   );
 };
 

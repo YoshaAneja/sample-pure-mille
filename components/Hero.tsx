@@ -11,25 +11,35 @@ import {
   wordAnimation,
 } from "@/utils/animations";
 const Hero = () => {
-  const handleScroll = () => {};
+  const handleScroll = () => {
+    const nextSection = document.getElementById("products");
+
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <>
       <motion.div className="hero" initial="initial" animate="animate">
         <div className="flex flex-1 pt-36 padding-x flex-col md:flex-row justify-between md:gap-5">
           <div>
-            <motion.div className="hero__title mt-10" variants={riseWithFade}>
+            <motion.div
+              className="hero__title mt-10 mr-10"
+              variants={riseWithFade}
+            >
               Pure Mille
             </motion.div>
             <CustomButton
               title="Explore our Catalogue"
-              containerStyles="bg-primary-brown text-white rounded-full mt-4"
+              containerStyles="bg-primary-brown text-white rounded-full mt-5"
               handleClick={handleScroll}
             />
           </div>
-          <div className="leading-[150%] max-w-[380px] min-w-[250px] hero__subtitle md:self-end">
+          <div className="leading-[150%] lg:max-w-[450px] max-w-[320px] min-w-[250px] hero__subtitle md:self-end">
             {/* a pure millet company dedicated to sustainable nutrition */}
             <AnimatedWords title="harvesting health, sowing sustainability." />
+            <br />
             <AnimatedWords title=" a pure millet company dedicated to you." />
           </div>
         </div>

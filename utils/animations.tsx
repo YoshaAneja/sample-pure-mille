@@ -32,6 +32,23 @@ export const videoAnimation = {
   },
 };
 
+export const buttonAnimation = {
+  initial: {
+    y: 100,
+    opacity: 0,
+    scale: 0.85,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    scale: 1,
+    transition: {
+      ease: [0.6, 0.01, 0.06, 0.95],
+      duration: 1.3,
+    },
+  },
+};
+
 export const staggerChildren = {
   animate: {
     transition: {

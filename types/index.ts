@@ -58,3 +58,12 @@ export interface ShowMoreProps {
   pageNumber: number;
   isNext: boolean;
 }
+
+export interface SecondaryHeroProps {
+  title: string;
+  subtitle: string;
+  image?: string;
+  imageAlt?: string;
+  scrollToID?: string;
+  buttonText?: string;
+}

@@ -132,20 +132,6 @@
 }
 /* END: Product Card styles */
 
-/* START: Car Details styles */
-.car-details__dialog-panel {
-  @apply relative w-full max-w-lg max-h-[90vh] overflow-y-auto transform rounded-2xl bg-white p-6 text-left shadow-xl transition-all flex flex-col gap-5;
-}
-
-.car-details__close-btn {
-  @apply absolute top-2 right-2 z-10 w-fit p-2 bg-primary-millet-100 rounded-full;
-}
-
-.car-details__main-image {
-  @apply relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg;
-}
-/* END: Car Details styles */
-
 /* START: Custom Filter styles */
 .custom-filter__btn {
   @apply relative w-full min-w-[127px] flex justify-between items-center cursor-default rounded-lg bg-white py-2 px-3 text-left shadow-md sm:text-sm border;
@@ -235,3 +221,27 @@
   @apply cursor-default select-none py-2 pl-10 pr-4;
 }
 /* END: search product styles */
+
+/* Start: Contact Form Styles */
+.contact-form-div {
+  @apply flex md:justify-end justify-center align-middle my-[60px] items-center max-sm:flex-col max-sm:gap-[50px] max-sm:p-[30px];
+}
+
+.contact-form-div__map {
+  @apply absolute md:float-right clear-both w-screen h-[550px] z-0 rounded-md max-sm:relative max-sm:h-[200px];
+}
+
+.contact-form {
+  @apply z-10 flex bg-primary-millet-100 flex-col w-[550px]  align-middle shadow-md rounded-3xl gap-8 md:mr-[30px] p-16 max-md:max-w-[400px] max-sm:w-[280px];
+}
+.contact-form__heading {
+  @apply text-primary-brown font-extrabold text-left text-4xl;
+}
+.contact-form__row {
+  @apply w-[100%];
+}
+
+.contact-form__row-child {
+  @apply w-full py-[20px] px-[24px] resize-y text-primary-brown bg-primary-wheat-200 rounded-full border border-primary-brown;
+}
+/* END: Contact Form Styles */
