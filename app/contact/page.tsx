@@ -1,7 +1,7 @@
 "use client";
 import SecondaryHero from "@/components/SecondaryHero";
 import React, { FormEvent, useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, Resolver } from "react-hook-form";
 
 import emailjs from "@emailjs/browser";
 
@@ -21,9 +21,15 @@ export default function ContactUs() {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState,
+    formState: { errors, isSubmitSuccessful },
   } = useForm<FormInputs>({
-    criteriaMode: "all",
+    defaultValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
   });
 
   const [disabled, setDisabled] = useState(false);
@@ -32,15 +38,16 @@ export default function ContactUs() {
     message: "",
     type: "",
   });
+  const [isTimeout, setIsTimeout] = useState(false);
 
   // Shows alert message for form submission feedback
   const toggleAlert = (message: string, type: string) => {
     setAlertInfo({ display: true, message, type });
-
     // Hide alert after 5 seconds
     setTimeout(() => {
       setAlertInfo({ display: false, message: "", type: "" });
-    }, 5000);
+      setIsTimeout(true);
+    }, 3000);
   };
 
   const onSubmit = async (data: FormInputs) => {
@@ -77,20 +84,18 @@ export default function ContactUs() {
       );
     } catch (e) {
       console.error(e);
-      // Display error alert
       toggleAlert("Uh oh. Something went wrong. Please try again.", "danger");
     } finally {
       // Re-enable form submission
       setDisabled(false);
       // Reset contact form fields after submission
-      reset({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
     }
   };
+  if (isTimeout && isSubmitSuccessful) {
+    reset();
+    setIsTimeout(false);
+  }
+
   return (
     <main className="overflow-hidden">
       <SecondaryHero
@@ -100,6 +105,21 @@ export default function ContactUs() {
         scrollToID=""
         image=""
       />
+      <div className="flex md:justify-end justify-center align-start items-start max-sm:mx-[30px]">
+        {alertInfo.display ? (
+          <div
+            className="transition-all text-center md:text-start font-bold text-primary-brown md:mr-[20px] my-4 w-[550px] max-md:max-w-[450px] max-sm:w-[90vw]"
+            role="alert"
+          >
+            {alertInfo.message}
+          </div>
+        ) : (
+          <div className="opacity-0 text-center md:text-start font-bold text-primary-brown md:mr-[20px] my-4 w-[550px] max-md:max-w-[450px] max-sm:w-[90vw]">
+            Awaiting Submission
+          </div>
+        )}
+      </div>
+
       <div className="contact-form-div">
         <iframe
           className="contact-form-div__map"
@@ -204,14 +224,6 @@ export default function ContactUs() {
             Submit
           </button>
         </form>
-        {alertInfo.display && (
-          <div
-            className="transition-all text-center font-bold text-primary-brown"
-            role="alert"
-          >
-            {alertInfo.message}
-          </div>
-        )}
       </div>
     </main>
   );

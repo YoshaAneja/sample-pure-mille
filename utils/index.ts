@@ -164,6 +164,16 @@ export const updateSearchParams = (type: string, value: number) => {
 
   return newPathName;
 };
+
+export const updateSearchParamsRecipe = (type: string, value: string) => {
+  const searchParams = new URLSearchParams(window.location.search);
+  searchParams.set(type, value);
+
+  const newPathName = `${window.location.pathname}?${searchParams.toString()}`;
+
+  return newPathName;
+};
+
 export const updateSearchParamsToggle = (type: string, enabled: boolean) => {
   const searchParams = new URLSearchParams(window.location.search);
   searchParams.set(type, enabled);

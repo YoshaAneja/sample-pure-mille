@@ -13,6 +13,9 @@ import SplashScreen from "./SplashScreen";
 import RecipeCard from "./RecipeCard";
 import RecipeDetails from "./RecipeDetails";
 import CustomButtonStatic from "./CustomButtonStatic";
+import SearchBarRecipes from "./SearchBarRecipes";
+import SearchRecipe from "./SearchRecipe";
+import SecondaryHero from "./SecondaryHero";
 export {
   Hero,
   CustomButton,
@@ -29,4 +32,7 @@ export {
   RecipeCard,
   RecipeDetails,
   CustomButtonStatic,
+  SearchBarRecipes,
+  SearchRecipe,
+  SecondaryHero,
 };

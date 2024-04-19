@@ -24,7 +24,7 @@ const Hero = () => {
   return (
     <>
       <motion.div className="hero" initial="initial" animate="animate">
-        <div className="flex flex-1 pt-36 padding-x flex-col md:flex-row justify-between md:gap-5">
+        <div className="flex flex-1 pt-32 padding-x flex-col md:flex-row justify-between md:gap-5">
           <div>
             <motion.div
               className="hero__title mt-10 mr-10"

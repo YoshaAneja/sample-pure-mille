@@ -64,7 +64,7 @@ const Navbar = () => {
                   : "flex justify-center items-center  hover:text-primary-brown hover:border-b hover:scale-102 hover:border-primary-brown  transition-all text-center max-[720px]:text-[13px]"
               }
             >
-              Millet Recipes
+              Our Cookbook
             </Link>
             <Link
               href="/blog"

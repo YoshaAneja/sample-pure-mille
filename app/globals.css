@@ -74,7 +74,7 @@
 }
 
 .home__filter-container {
-  @apply flex justify-start flex-wrap items-center gap-2;
+  @apply flex justify-start flex-wrap items-center gap-6 md:gap-4;
 }
 
 .home__products-wrapper {
@@ -270,7 +270,7 @@
 
 /* Start: Contact Form Styles */
 .contact-form-div {
-  @apply flex md:justify-end justify-center align-middle my-[60px] items-center max-sm:flex-col max-sm:gap-[50px] max-sm:p-[30px] max-sm:mx-[30px];
+  @apply flex md:justify-end justify-center align-middle mb-[60px] items-center max-sm:flex-col max-sm:gap-[50px] max-sm:p-[30px] max-sm:mx-[30px];
 }
 
 .contact-form-div__map {

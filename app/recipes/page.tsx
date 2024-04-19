@@ -1,12 +1,12 @@
 import {
   CustomFilter,
   CustomToggle,
-  ProductCard,
-  SearchBar,
+  SearchBarRecipes,
   ShowMore,
+  RecipeCard,
+  SecondaryHero,
 } from "@/components";
-import RecipeCard from "@/components/RecipeCard";
-import SecondaryHero from "@/components/SecondaryHero";
+import CustomFilterRecipes from "@/components/CustomFilterRecipes";
 import { typesSecondary } from "@/constants";
 import { fetchMillets, fetchRecipes } from "@/utils";
 import React from "react";
@@ -14,7 +14,7 @@ import React from "react";
 export default async function Recipes({ searchParams }) {
   const allRecipesDocuments = await fetchRecipes({
     recipe_millet: searchParams.recipe_millet,
-    title: searchParams.title,
+    title: searchParams.in_recipe,
     gluten_free: searchParams.gluten_free,
   });
   const allRecipes = allRecipesDocuments.documents;
@@ -37,10 +37,13 @@ export default async function Recipes({ searchParams }) {
           <h2>Explore all our recipes</h2>
         </div>
         <div className="home__filters">
-          <SearchBar />
+          <SearchBarRecipes />
           <div className="home__filter-container">
             <CustomToggle />
-            <CustomFilter title="Millet Used" options={typesSecondary} />
+            <CustomFilterRecipes
+              title="recipe_millet"
+              options={typesSecondary}
+            />
           </div>
         </div>
 

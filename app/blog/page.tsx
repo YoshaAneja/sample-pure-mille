@@ -6,7 +6,7 @@ export default function Blog() {
     <main className="overflow-hidden">
       <SecondaryHero
         title="Why Pure Mille"
-        subtitle="Pure Mille is committed to providing you with the highest quality, sustainably sourced millets that are both delicious and nutritious. Packed with essential nutrients, antioxidants, and dietary fiber, millets are not just a healthy choice but also an eco-friendly one. Choose nature's nutritional gold - millets."
+        subtitle="Pure Mille is committed to providing you with the highest quality, sustainably sourced millets that are both delicious and packed with essential nutrients, antioxidants, and dietary fiber. Choose nature's nutritional gold - millets."
         buttonText="Read More"
         scrollToID="blog"
         image="9028.jpg"

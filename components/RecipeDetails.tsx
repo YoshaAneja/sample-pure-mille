@@ -111,6 +111,7 @@ const RecipeDetails = ({
                     <MDEditor.Markdown
                       source={recipe.body}
                       style={{
+                        background: "white",
                         color: "grey",
                       }}
                     />

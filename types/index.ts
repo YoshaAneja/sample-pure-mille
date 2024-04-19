@@ -15,6 +15,11 @@ export interface SearchTypeProps {
   setType: (type: string) => void;
 }
 
+export interface SearchRecipeProps {
+  titleContains: string;
+  setTitleContains: (titleContains: string) => void;
+}
+
 export interface SearchProductProps {
   product: string;
   setProduct: (product: string) => void;
@@ -60,9 +65,19 @@ export interface OptionProps {
   value: number;
 }
 
+export interface OptionRecipesProps {
+  title: string;
+  value: string;
+}
+
 export interface CustomFilterProps {
   title: string;
   options: OptionProps[];
+}
+
+export interface CustomFilterRecipesProps {
+  title: string;
+  options: OptionRecipesProps[];
 }
 
 export interface ShowMoreProps {

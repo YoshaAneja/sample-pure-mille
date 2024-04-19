@@ -63,12 +63,12 @@ const RecipeCard = ({ recipe, milletType }: RecipeCardProps) => {
           ) : (
             <div className="flex flex-col justify-center items-center gap-2">
               <Image
-                src="/gluten-free.svg"
+                src="/plant-based.svg"
                 width={25}
                 height={25}
-                alt="gluten free"
+                alt="plant based"
               />
-              <p className="text-[14px]">Gluten Free</p>
+              <p className="text-[14px]">Plant Based</p>
             </div>
           )}
           <div className="flex flex-col justify-center items-center gap-2">
