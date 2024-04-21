@@ -75,6 +75,11 @@ export interface FilterProps {
 
 export interface OptionProps {
   title: string;
+  value: number;
+}
+
+export interface RecipeOptionProps {
+  title: string;
   value: string;
 }
 
@@ -85,7 +90,7 @@ export interface CustomFilterProps {
 
 export interface CustomFilterRecipesProps {
   title: string;
-  options: OptionProps[];
+  options: RecipeOptionProps[];
 }
 
 export interface ShowMoreProps {

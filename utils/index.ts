@@ -190,9 +190,9 @@ export async function fetchBlogPosts(blogFilters: BlogFilterProps) {
 //   }
 // }
 
-export const updateSearchParams = (type: string, value: string) => {
+export const updateSearchParams = (type: string, value: number) => {
   const searchParams = new URLSearchParams(window.location.search);
-  searchParams.set(type, value);
+  searchParams.set(type, String(value));
 
   const newPathName = `${window.location.pathname}?${searchParams.toString()}`;
 
@@ -208,9 +208,10 @@ export const updateSearchParamsRecipe = (type: string, value: string) => {
   return newPathName;
 };
 
-export const updateSearchParamsToggle = (type: string, enabled: string) => {
+
+export const updateSearchParamsToggle = (type: string, enabled: boolean) => {
   const searchParams = new URLSearchParams(window.location.search);
-  searchParams.set(type, enabled);
+  searchParams.set(type, String(enabled));
 
   const newPathName = `${window.location.pathname}?${searchParams.toString()}`;
 

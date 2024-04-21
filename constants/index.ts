@@ -64,7 +64,7 @@ export const typesSecondary = [
 export const products = ["Cereal", "Pasta", "Gluten Free Grains", "Pancakes"];
 
 export const priceRanges = [
-  { title: "< $20", value: "20" },
-  { title: "< $30", value: "30" },
-  { title: "< $40", value: "40" },
+  { title: "< $20", value: 20 },
+  { title: "< $30", value: 30 },
+  { title: "< $40", value: 40 },
 ];
