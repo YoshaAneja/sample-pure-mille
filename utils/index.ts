@@ -190,7 +190,7 @@ export async function fetchBlogPosts(blogFilters: BlogFilterProps) {
 //   }
 // }
 
-export const updateSearchParams = (type: string, value: number) => {
+export const updateSearchParams = (type: string, value: string) => {
   const searchParams = new URLSearchParams(window.location.search);
   searchParams.set(type, value);
 
@@ -208,7 +208,7 @@ export const updateSearchParamsRecipe = (type: string, value: string) => {
   return newPathName;
 };
 
-export const updateSearchParamsToggle = (type: string, enabled: boolean) => {
+export const updateSearchParamsToggle = (type: string, enabled: string) => {
   const searchParams = new URLSearchParams(window.location.search);
   searchParams.set(type, enabled);
 

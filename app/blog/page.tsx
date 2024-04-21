@@ -2,7 +2,7 @@ import { ShowMore, SecondaryHero, SearchBarBlog, BlogCard } from "@/components";
 import { fetchBlogPosts } from "@/utils";
 import React from "react";
 
-export default async function Blog({ searchParams }) {
+export default async function Blog({ searchParams }: any) {
   const allBlogPostsDocument = await fetchBlogPosts({
     category: searchParams.category,
   });

@@ -10,7 +10,7 @@ import { typesSecondary } from "@/constants";
 import { fetchMillets, fetchRecipes } from "@/utils";
 import React from "react";
 
-export default async function Recipes({ searchParams }) {
+export default async function Recipes({ searchParams }: any) {
   const allRecipesDocuments = await fetchRecipes({
     recipe_millet: searchParams.recipe_millet,
     title: searchParams.in_recipe,

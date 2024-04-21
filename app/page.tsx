@@ -11,7 +11,7 @@ import { fetchMilletProducts, fetchMillets } from "@/utils";
 import { all } from "axios";
 import Image from "next/image";
 
-export default async function Home({ searchParams }) {
+export default async function Home({ searchParams }: any) {
   const allMilletProductsDocuments = await fetchMilletProducts({
     type: searchParams.type,
     product: searchParams.product,
