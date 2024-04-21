@@ -1,7 +1,15 @@
-import SecondaryHero from "@/components/SecondaryHero";
+import { ShowMore, SecondaryHero, SearchBarBlog, BlogCard } from "@/components";
+import { fetchBlogPosts } from "@/utils";
 import React from "react";
 
-export default function Blog() {
+export default async function Blog({ searchParams }) {
+  const allBlogPostsDocument = await fetchBlogPosts({
+    category: searchParams.category,
+  });
+  const allBlogPosts = allBlogPostsDocument.documents;
+
+  const isDataEmpty =
+    !Array.isArray(allBlogPosts) || allBlogPosts.length < 1 || !allBlogPosts;
   return (
     <main className="overflow-hidden">
       <SecondaryHero
@@ -10,9 +18,33 @@ export default function Blog() {
         buttonText="Read More"
         scrollToID="blog"
         image="9028.jpg"
-        imageAlt="Why Pure Mille"
       />
-      <div id="blog"> blog</div>
+      <div className="mt-12 padding-x padding-y max-width" id="blog">
+        <div className="home__text-container">
+          <h1 className="text-4xl font-extrabold">Our Blog</h1>
+        </div>
+        <div className="home__filters">
+          <SearchBarBlog />
+        </div>
+
+        {!isDataEmpty ? (
+          <section>
+            <div className="home__products-wrapper">
+              {allBlogPosts?.map(async (item) => {
+                return <BlogCard blogPost={item} />;
+              })}
+            </div>
+            <ShowMore
+              pageNumber={(searchParams.limit || 10) / 10}
+              isNext={(searchParams.limit || 10) > allBlogPosts.length}
+            />
+          </section>
+        ) : (
+          <div className="home__error-container">
+            <h2 className="text-black text-xl font-bold">Oops, no results</h2>
+          </div>
+        )}
+      </div>
     </main>
   );
 }

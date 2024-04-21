@@ -25,6 +25,11 @@ export interface SearchProductProps {
   setProduct: (product: string) => void;
 }
 
+export interface SearchBlogProps {
+  category: string;
+  setCategory: (category: string) => void;
+}
+
 export interface ProductProps {
   product_name: string;
   millet_types: string;
@@ -46,6 +51,14 @@ export interface RecipeProps {
   cooking_time: string;
   primary_image: string;
   secondary_images: Array<string>;
+}
+
+export interface BlogProps {
+  title: string;
+  category: string;
+  content: string;
+  author: string;
+  blog_image: string;
 }
 
 export interface MilletProps {
@@ -88,6 +101,7 @@ export interface ShowMoreProps {
 export interface SecondaryHeroProps {
   title: string;
   subtitle: string;
+  subtitle2?: string;
   image?: string;
   imageAlt?: string;
   scrollToID?: string;
@@ -98,4 +112,8 @@ export interface FilterPropsRecipes {
   recipe_millet?: string;
   title?: string;
   gluten_free?: string;
+}
+
+export interface BlogFilterProps {
+  category?: string;
 }

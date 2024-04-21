@@ -26,7 +26,7 @@ const RecipeCard = ({ recipe, milletType }: RecipeCardProps) => {
 
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="recipe-card group">
+    <div className="recipe-card group z-0">
       <div className="recipe-card__content">
         <h2 className="recipe-card__content-title">{title}</h2>
       </div>

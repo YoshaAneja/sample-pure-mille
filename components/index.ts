@@ -16,6 +16,10 @@ import CustomButtonStatic from "./CustomButtonStatic";
 import SearchBarRecipes from "./SearchBarRecipes";
 import SearchRecipe from "./SearchRecipe";
 import SecondaryHero from "./SecondaryHero";
+import SearchBarBlog from "./SearchBarBlog";
+import BlogCard from "./BlogCard";
+import BlogDetails from "./BlogDetails";
+import SearchBlog from "./SearchBlog";
 export {
   Hero,
   CustomButton,
@@ -35,4 +39,8 @@ export {
   SearchBarRecipes,
   SearchRecipe,
   SecondaryHero,
+  SearchBarBlog,
+  BlogCard,
+  BlogDetails,
+  SearchBlog,
 };

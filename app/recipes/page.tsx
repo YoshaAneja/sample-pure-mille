@@ -1,5 +1,4 @@
 import {
-  CustomFilter,
   CustomToggle,
   SearchBarRecipes,
   ShowMore,

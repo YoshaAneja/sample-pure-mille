@@ -44,6 +44,7 @@ export const types = [
 ];
 
 export const recipes = ["First Recipe", "Second Recipe"];
+export const categories = ["Environment", "Health", "Beauty"];
 
 export const typesSecondary = [
   { title: "Pearl (Bajra)", value: "Pearl (Bajra)" },
