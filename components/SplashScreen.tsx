@@ -2,7 +2,11 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
-const SplashScreen = ({ children }) => {
+const SplashScreen = ({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     // whatever you need to do
