@@ -57,10 +57,7 @@ const Hero = () => {
           animate="animate"
           variants={videoAnimation}
         >
-          <source
-            src="https://jfdcstfgwmrzo1bc.public.blob.vercel-storage.com/pure%20mille%20sample%20video-fxQNp9n2KNj8lhr3Tjlkwv09WyYWU0.mp4"
-            type="video/mp4"
-          />
+          <source src="/pure mille sample video.mp4" type="video/mp4" />
           Your browser does not support the video.
         </motion.video>
       </div>
