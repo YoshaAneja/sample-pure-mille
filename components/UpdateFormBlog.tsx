@@ -135,7 +135,7 @@ const UpdateFormBlog = ({ handleClick }: BlogUpdateButtonProps) => {
           )}
         </div>
         <div className="-mb-4 text-primary-brown font-bold text-[18px]">
-          Product Type:
+          Category
         </div>
         <div className="flex sm:flex-row flex-col justify-between gap-2 flex-1">
           {categories.map((item) => (
@@ -182,7 +182,7 @@ const UpdateFormBlog = ({ handleClick }: BlogUpdateButtonProps) => {
           )}
         </div>
         <div className="-mb-4 text-primary-brown font-bold text-[18px]">
-          Blog Post Content
+          Content
         </div>
         <div className="flex flex-col gap-4">
           <textarea

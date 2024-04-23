@@ -225,7 +225,7 @@ const UpdateFormRecipes = ({ handleClick }: RecipeUpdateButtonProps) => {
           <span className="error-message">{errors.glutenFree.message}</span>
         )}
         <div className="-mb-4 text-primary-brown font-bold text-[18px]">
-          Images:
+          Images
         </div>
         <div>
           <input

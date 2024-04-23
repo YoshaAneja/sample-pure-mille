@@ -118,7 +118,7 @@ const UpdateForm = ({ handleClick }: UpdateButtonProps) => {
         className="flex flex-col gap-8 p-16 bg-primary-millet-100 shadow-md rounded-lg lg:max-w-[800px] max-md:mx-16"
       >
         <div className="-mb-4 text-primary-brown font-bold text-[18px]">
-          Product Name:
+          Product Name
         </div>
         <div>
           <input
@@ -139,7 +139,7 @@ const UpdateForm = ({ handleClick }: UpdateButtonProps) => {
           )}
         </div>
         <div className="-mb-4 text-primary-brown font-bold text-[18px]">
-          Millet Type:
+          Millet Type
         </div>
         <div className="flex md:flex-row flex-col justify-between gap-2 flex-1 flex-wrap">
           {types.map((type) => (
@@ -165,7 +165,7 @@ const UpdateForm = ({ handleClick }: UpdateButtonProps) => {
           <span className="error-message">{errors.milletType.message}</span>
         )}
         <div className="-mb-4 text-primary-brown font-bold text-[18px]">
-          Weight:
+          Weight (g)
         </div>
         <div>
           <input
@@ -187,7 +187,7 @@ const UpdateForm = ({ handleClick }: UpdateButtonProps) => {
           )}
         </div>
         <div className="-mb-4 text-primary-brown font-bold text-[18px]">
-          Price:
+          Price ($)
         </div>
         <div>
           <input
@@ -209,7 +209,7 @@ const UpdateForm = ({ handleClick }: UpdateButtonProps) => {
           )}
         </div>
         <div className="-mb-4 text-primary-brown font-bold text-[18px]">
-          Gluten Free:
+          Gluten Free
         </div>
         <div className="flex flex-row justify-start gap-2 flex-1">
           <div className="flex flex-row items-center gap-2 text-primary-brown rounded-lg px-8 py-3 shadow-lg">
@@ -251,7 +251,7 @@ const UpdateForm = ({ handleClick }: UpdateButtonProps) => {
           <span className="error-message">{errors.glutenFree.message}</span>
         )}
         <div className="-mb-4 text-primary-brown font-bold text-[18px]">
-          Images:
+          Images
         </div>
         <div>
           <input
@@ -301,7 +301,7 @@ const UpdateForm = ({ handleClick }: UpdateButtonProps) => {
           />
         </div>
         <div className="-mb-4 text-primary-brown font-bold text-[18px]">
-          Product Type:
+          Product Type
         </div>
         <div className="flex sm:flex-row flex-col justify-between gap-2 flex-1">
           {products.map((product) => (
@@ -327,7 +327,7 @@ const UpdateForm = ({ handleClick }: UpdateButtonProps) => {
           <span className="error-message">{errors.productType.message}</span>
         )}
         <div className="-mb-4 text-primary-brown font-bold text-[18px]">
-          Product Description:
+          Product Description
         </div>
         <div className="flex flex-col gap-4">
           <textarea
