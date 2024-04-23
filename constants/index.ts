@@ -32,6 +32,7 @@ export const types = [
   "Kodo",
   "Barnyard",
   "Proso",
+  "Combo",
 ];
 
 export const recipes = ["First Recipe", "Second Recipe"];
@@ -50,6 +51,7 @@ export const typesSecondary = [
   { title: "Kodo", value: "Kodo" },
   { title: "Barnyard", value: "Barnyard" },
   { title: "Proso", value: "Proso" },
+  { title: "Combo", value: "Combo" },
 ];
 
 export const products = [
