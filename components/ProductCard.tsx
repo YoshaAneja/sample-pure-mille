@@ -13,14 +13,8 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ product, milletType }: ProductCardProps) => {
-  const {
-    product_name,
-    millet_types,
-    weight,
-    price,
-    gluten_free,
-    primary_image_url,
-  } = product;
+  const { product_name, weight, price, gluten_free, primary_image_url } =
+    product;
 
   const { millet_type, millet_description } = milletType;
 
@@ -32,7 +26,7 @@ const ProductCard = ({ product, milletType }: ProductCardProps) => {
         <h2 className="card-card__content-title">{product_name}</h2>
       </div>
       <span className="self-start text-[14px] font-semibold">
-        {millet_types}
+        {millet_type} Millet
       </span>
 
       <div className="relative w-full h-40 my-3 object-contain">
@@ -47,17 +41,17 @@ const ProductCard = ({ product, milletType }: ProductCardProps) => {
       <div className="relative flex w-full mt-2">
         <div className="flex group-hover:invisible w-full justify-between text-gray">
           <div className="flex flex-col justify-center items-center gap-2">
-            <Image src="/scale.svg" width={20} height={20} alt="millet" />
+            <Image src="/scale.svg" width={20} height={20} alt="weight" />
             <p className="text-[14px]">{weight}</p>
           </div>
           <div className="flex flex-col justify-center items-center gap-2">
-            <Image src="/gluten-free.svg" width={25} height={25} alt="millet" />
+            <Image src="/gluten-free.svg" width={25} height={25} alt="gf?" />
             <p className="text-[14px]">
               {gluten_free == "true" ? "Gluten Free" : "Plant Based"}
             </p>
           </div>
           <div className="flex flex-col justify-center items-center gap-2">
-            <Image src="/price-tag.svg" width={20} height={20} alt="millet" />
+            <Image src="/price-tag.svg" width={20} height={20} alt="price" />
             <p className="text-[14px]">${price}</p>
           </div>
         </div>

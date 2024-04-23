@@ -46,7 +46,7 @@ export default async function Home({ searchParams }: any) {
           <section>
             <div className="home__products-wrapper">
               {allMilletProducts?.map(async (product) => {
-                const allMillets = await fetchMillets(product.millet_types);
+                var allMillets = await fetchMillets(product.millet_type);
                 return (
                   <ProductCard
                     product={product}

@@ -48,7 +48,7 @@ const RecipeCard = ({ recipe, milletType }: RecipeCardProps) => {
               height={20}
               alt={recipe_millet}
             />
-            <p className="text-[14px]">{recipe_millet}</p>
+            <p className="text-[14px]">{recipe_millet} Millet</p>
           </div>
           {gluten_free === "true" ? (
             <div className="flex flex-col justify-center items-center gap-2">
