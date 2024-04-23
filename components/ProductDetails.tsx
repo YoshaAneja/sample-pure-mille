@@ -1,7 +1,7 @@
 "use client";
 
 import { MilletProps, ProductProps } from "@/types";
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -30,6 +30,13 @@ const ProductDetails = ({
 
     return http.status != 404;
   };
+  const [activeImage, setActiveImage] = useState(
+    String(product.primary_image_url)
+  );
+  const [lastActiveImage, setLastActiveImage] = useState(
+    String(product.secondary_images) ? [0] : ""
+  );
+
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
@@ -70,14 +77,17 @@ const ProductDetails = ({
                       className="object-contain"
                     />
                   </button>
-                  <div className="flex-1 flex flex-col gap-3">
-                    <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
+                  <div className="flex-1 flex flex-col gap-3 ">
+                    <div className="relative w-full bg-pattern bg-cover bg-center rounded-lg h-80">
                       <Image
-                        src={product.primary_image_url || "/.png"}
+                        src={activeImage || "/.png"}
                         alt="millets"
                         fill
                         priority
-                        className="object-contain"
+                        className="object-contain cursor-pointer"
+                        onClick={() => {
+                          setActiveImage(product.primary_image_url || "");
+                        }}
                       />
                     </div>
                     <div className="flex gap-3">
@@ -86,11 +96,15 @@ const ProductDetails = ({
                           return (
                             <div className="flex-1 relative w-full h-24 bg-primary-millet-100">
                               <Image
-                                src={secondaryImage}
                                 alt={product.product_name}
                                 fill
                                 priority
-                                className="object-contain"
+                                className="object-contain cursor-pointer"
+                                onClick={() => {
+                                  setLastActiveImage(activeImage);
+                                  setActiveImage(secondaryImage);
+                                }}
+                                src={secondaryImage}
                               />
                             </div>
                           );

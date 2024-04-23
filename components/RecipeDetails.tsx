@@ -1,7 +1,7 @@
 "use client";
 
 import { MilletProps, RecipeProps } from "@/types";
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import Image from "next/image";
 
 import { Dialog, Transition } from "@headlessui/react";
@@ -29,6 +29,8 @@ const RecipeDetails = ({
 
     return http.status != 404;
   };
+
+  const [activeImage, setActiveImage] = useState(recipe.primary_image);
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
@@ -72,7 +74,7 @@ const RecipeDetails = ({
                   <div className="flex-1 flex flex-col gap-3">
                     <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
                       <Image
-                        src={recipe.primary_image}
+                        src={activeImage}
                         alt="millets"
                         fill
                         priority
