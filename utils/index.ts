@@ -171,7 +171,7 @@ export async function addBlogPosts(blogPostDetails: BlogPostDetailsProps) {
       author: author,
       category: category,
       content: content,
-      blog_image: blogImage
+      blog_image: blogImage,
     },
   });
 

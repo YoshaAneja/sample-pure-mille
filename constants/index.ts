@@ -52,7 +52,16 @@ export const typesSecondary = [
   { title: "Proso", value: "Proso" },
 ];
 
-export const products = ["Cereal", "Pasta", "Gluten Free Grains", "Pancakes"];
+export const products = [
+  "GF Whole Grains",
+  "Biscuits",
+  "Chivda",
+  "Muruku",
+  "Rava",
+  "Khichidi Mix",
+  "Malt",
+  "Combo",
+];
 
 export const priceRanges = [
   { title: "< $20", value: 20 },
