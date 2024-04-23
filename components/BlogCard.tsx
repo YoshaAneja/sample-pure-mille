@@ -21,7 +21,7 @@ const BlogCard = ({ blogPost }: BlogCardProps) => {
       </div>
       <div className="relative w-full h-40 my-3 object-contain">
         <Image
-          src={blog_image || "/placeholder-img6.png"}
+          src={blog_image || "/placeholder-img.png"}
           alt={title}
           fill
           priority

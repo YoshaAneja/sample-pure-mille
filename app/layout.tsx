@@ -4,7 +4,7 @@ import "./globals.css";
 import { Footer, Navbar, SplashScreen } from "@/components";
 
 export const metadata: Metadata = {
-  title: "Pure Mille",
+  title: "Pure Millé",
   description: "a pure millet company",
 };
 

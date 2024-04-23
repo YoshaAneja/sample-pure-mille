@@ -30,7 +30,7 @@ const Hero = () => {
               className="hero__title mt-10 mr-10"
               variants={riseWithFade}
             >
-              Pure Mille
+              Pure Millé
             </motion.div>
             <CustomButton
               title="Explore our Catalogue"

@@ -2,7 +2,7 @@ export const footerLinks = [
   {
     title: "About",
     links: [
-      { title: "Why Pure Mille", url: "/blog" },
+      { title: "Why Pure Millé", url: "/blog" },
       { title: "Our Cookbook", url: "/recipes" },
       { title: "How it Works", url: "/" },
       { title: "Contact Us", url: "/contact" },

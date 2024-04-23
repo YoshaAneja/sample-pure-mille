@@ -28,11 +28,10 @@ export default async function Recipes({ searchParams }: any) {
         subtitle="Dive into the world of nutritious and sustainable millets with us, and discover delicious recipes, health benefits, and more. Join our community and embrace a healthier, greener lifestyle today!"
         buttonText="Learn More"
         scrollToID="recipes"
-        image="9028.jpg"
       />
       <div className="mt-12 padding-x padding-y max-width" id="recipes">
         <div className="home__text-container">
-          <h1 className="text-4xl font-extrabold">The Pure Mille Cookbook</h1>
+          <h1 className="text-4xl font-extrabold">The Pure Millé Cookbook</h1>
           <h2>Explore all our recipes</h2>
         </div>
         <div className="home__filters">

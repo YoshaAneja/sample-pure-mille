@@ -21,7 +21,7 @@ const SplashScreen = ({
         src={"/pure_mille_splash_screen.gif"}
         width={300}
         height={300}
-        alt="Pure Mille"
+        alt="Pure Millé"
         unoptimized
       />
     </div>

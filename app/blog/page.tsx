@@ -13,11 +13,10 @@ export default async function Blog({ searchParams }: any) {
   return (
     <main className="overflow-hidden">
       <SecondaryHero
-        title="Why Pure Mille"
-        subtitle="Pure Mille is committed to providing you with the highest quality, sustainably sourced millets that are both delicious and packed with essential nutrients, antioxidants, and dietary fiber. Choose nature's nutritional gold - millets."
+        title="Why Pure Millé"
+        subtitle="Pure Millé is committed to providing you with the highest quality, sustainably sourced millets that are both delicious and packed with essential nutrients, antioxidants, and dietary fiber. Choose nature's nutritional gold - millets."
         buttonText="Read More"
         scrollToID="blog"
-        image="9028.jpg"
       />
       <div className="mt-12 padding-x padding-y max-width" id="blog">
         <div className="home__text-container">

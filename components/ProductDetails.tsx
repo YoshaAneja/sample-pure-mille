@@ -74,7 +74,7 @@ const ProductDetails = ({
                     <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
                       <Image
                         src={
-                          product.primary_image_url || "/placeholder-img6.png"
+                          product.primary_image_url || "/.png"
                         }
                         alt="millets"
                         fill

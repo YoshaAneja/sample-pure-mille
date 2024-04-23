@@ -37,7 +37,7 @@ const ProductCard = ({ product, milletType }: ProductCardProps) => {
 
       <div className="relative w-full h-40 my-3 object-contain">
         <Image
-          src={primary_image_url || "/placeholder-img6.png"}
+          src={primary_image_url || "/placeholder-img.png"}
           alt="millets"
           fill
           priority

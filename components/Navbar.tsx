@@ -33,7 +33,7 @@ const Navbar = () => {
         <Link href="/" className="flex justify-center items-center">
           <Image
             src="/logo.png"
-            alt="Pure Mille Logo"
+            alt="Pure Millé Logo"
             width={150}
             height={18}
             className="object-contain"
@@ -74,7 +74,7 @@ const Navbar = () => {
                   : "flex justify-center items-center  hover:text-primary-brown hover:border-b hover:scale-102 hover:border-primary-brown  transition-all text-center max-[720px]:text-[13px]"
               }
             >
-              Why Pure Mille
+              Why Pure Millé
             </Link>
           </div>
           <div
@@ -149,7 +149,7 @@ const Navbar = () => {
                     : "transition-all"
                 }
               >
-                Why Pure Mille
+                Why Pure Millé
               </span>
             </Link>
             <CustomButton

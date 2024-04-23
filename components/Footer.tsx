@@ -10,13 +10,13 @@ const Footer = () => {
         <div className="flex flex-col justify-start items-start gap-6">
           <Image
             src="/logo.png"
-            alt="Pure Mille"
+            alt="Pure Millé"
             width={118}
             height={18}
             className="object-contain"
           />
           <p className="text-base text-gray-700">
-            Pure Mille 2024 <br /> All rights reserved &copy;
+            Pure Millé 2024 <br /> All rights reserved &copy;
           </p>
         </div>
         <div className="footer__links">
@@ -37,7 +37,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex justify-between items-center flex-wrap mt-10 border-t border-gray-100 sm:px-16 px-6 py-10">
-        <p>@2024 PureMille. All Rights Reserved.</p>
+        <p>@2024 Pure Millé. All Rights Reserved.</p>
         <div className="footer__copyright-link">
           <Link href="/" className="text-gray-500">
             Privacy Policy
