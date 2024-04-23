@@ -303,7 +303,7 @@ const UpdateForm = ({ handleClick }: UpdateButtonProps) => {
         <div className="-mb-4 text-primary-brown font-bold text-[18px]">
           Product Type
         </div>
-        <div className="flex sm:flex-row flex-col justify-between gap-2 flex-1">
+        <div className="flex sm:flex-row flex-col justify-between gap-2 flex-1 flex-wrap">
           {products.map((product) => (
             <div className="flex flex-row md:justify-center items-center gap-2 text-primary-brown rounded-lg px-8 md:py-3 py-6 shadow-lg">
               <input
