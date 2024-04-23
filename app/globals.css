@@ -297,3 +297,6 @@
   @apply text-sm text-primary-brown;
 }
 /* END: Contact Form Styles */
+.markdown > * {
+  all: revert;
+}

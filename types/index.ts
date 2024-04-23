@@ -10,6 +10,21 @@ export interface CustomButtonProps {
   isDisabled?: boolean;
 }
 
+export interface UpdateButtonProps {
+  handleClick: (product: ProductDetailsProps) => void;
+  isDisabled?: boolean;
+}
+
+export interface RecipeUpdateButtonProps {
+  handleClick: (recipe: RecipeDetailsProps) => void;
+  isDisabled?: boolean;
+}
+
+export interface BlogUpdateButtonProps {
+  handleClick: (blogPost: BlogPostDetailsProps) => void;
+  isDisabled?: boolean;
+}
+
 export interface SearchTypeProps {
   type: string;
   setType: (type: string) => void;
@@ -45,7 +60,7 @@ export interface ProductProps {
 export interface RecipeProps {
   title: string;
   gluten_free: string;
-  body: string;
+  instructions: string;
   recipe_millet: string;
   ingredients: Array<string>;
   cooking_time: string;
@@ -116,4 +131,39 @@ export interface FilterPropsRecipes {
 
 export interface BlogFilterProps {
   category?: string;
+}
+
+export interface ProductDetailsProps {
+  productName: string;
+  milletType: string;
+  weight: number;
+  price: number;
+  glutenFree: string;
+  primaryImageUrl: string;
+  secondaryImage1: string;
+  secondaryImage2: string;
+  secondaryImage3: string;
+  productType: string;
+  productDescription: string;
+}
+
+export interface RecipeDetailsProps {
+  title: string;
+  instructions: string;
+  glutenFree: string;
+  recipeMillet: string;
+  cookingTime: number;
+  primaryImageUrl: string;
+  secondaryImage1: string;
+  secondaryImage2: string;
+  secondaryImage3: string;
+  ingredients: Array<string>;
+}
+
+export interface BlogPostDetailsProps {
+  title: string;
+  author: string;
+  category: string;
+  content: string;
+  blogImage: string;
 }

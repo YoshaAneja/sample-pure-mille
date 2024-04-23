@@ -109,7 +109,7 @@ const RecipeDetails = ({
                       ))}
                     </ol>
                     <MDEditor.Markdown
-                      source={recipe.body}
+                      source={recipe.instructions}
                       style={{
                         background: "white",
                         color: "grey",

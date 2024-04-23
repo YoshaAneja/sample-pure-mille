@@ -17,7 +17,7 @@ const RecipeCard = ({ recipe, milletType }: RecipeCardProps) => {
     title,
     gluten_free,
     recipe_millet,
-    body,
+    instructions,
     ingredients,
     primary_image,
     secondary_images,
@@ -91,7 +91,7 @@ const RecipeCard = ({ recipe, milletType }: RecipeCardProps) => {
         isOpen={isOpen}
         closeModal={() => setIsOpen(false)}
         recipe={recipe}
-        milletType={milletType}
+        milletType={milletType || ""}
       />
     </div>
   );

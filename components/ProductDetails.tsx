@@ -3,6 +3,8 @@
 import { MilletProps, ProductProps } from "@/types";
 import React, { Fragment } from "react";
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 import { Dialog, Transition } from "@headlessui/react";
 var XMLHttpRequest = require("xhr2");
@@ -107,8 +109,10 @@ const ProductDetails = ({
                         <h4 className="text-primary-brown capitalize font-bold mb-2">
                           Why Choose {product.product_name}
                         </h4>
-                        <p className="text-grey">
-                          {product.product_description}
+                        <p className="text-grey font-[16px]">
+                          <ReactMarkdown className="markdown">
+                            {product.product_description}
+                          </ReactMarkdown>
                         </p>
                       </div>
                       <div>

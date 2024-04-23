@@ -221,6 +221,7 @@ export default function ContactUs() {
           </div>
           <button
             type="submit"
+            disabled={disabled}
             className="p-[16px] w-full border border-primary-brown bg-primary-brown text-primary-wheat-100 font-bold text-lg rounded-full hover:bg-primary-wheat-100 hover:text-primary-brown transition-all duration-500 flex-1"
           >
             Submit

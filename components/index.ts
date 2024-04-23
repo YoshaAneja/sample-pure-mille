@@ -20,6 +20,9 @@ import SearchBarBlog from "./SearchBarBlog";
 import BlogCard from "./BlogCard";
 import BlogDetails from "./BlogDetails";
 import SearchBlog from "./SearchBlog";
+import UpdateForm from "./UpdateForm";
+import UpdateFormRecipes from "./UpdateFormRecipes";
+import UpdateFormBlog from "./UpdateFormBlog";
 export {
   Hero,
   CustomButton,
@@ -43,4 +46,7 @@ export {
   BlogCard,
   BlogDetails,
   SearchBlog,
+  UpdateForm,
+  UpdateFormRecipes,
+  UpdateFormBlog,
 };

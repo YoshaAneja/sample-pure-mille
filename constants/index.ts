@@ -2,19 +2,10 @@ export const footerLinks = [
   {
     title: "About",
     links: [
-      { title: "How it works", url: "/" },
-      { title: "Featured", url: "/" },
-      { title: "Partnership", url: "/" },
-      { title: "Business Relations", url: "/" },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      { title: "Events", url: "/" },
-      { title: "Blog", url: "/" },
-      { title: "Podcast", url: "/" },
-      { title: "Refer to a friend", url: "/" },
+      { title: "Why Pure Mille", url: "/blog" },
+      { title: "Our Cookbook", url: "/recipes" },
+      { title: "How it Works", url: "/" },
+      { title: "Contact Us", url: "/contact" },
     ],
   },
   {
@@ -29,36 +20,36 @@ export const footerLinks = [
 ];
 
 export const types = [
-  "Pearl (Bajra)",
-  "Sorghum (Jowar)",
-  "Foxtail (Kakum/Kangni)",
-  "Finger (Ragi)",
+  "Pearl",
+  "Sorghum",
+  "Foxtail",
+  "Finger",
   "Fonio",
-  "Browntop (Korle)",
-  "Little (Moraiyo)",
-  "Buckwheat (Kuttu)",
-  "Amaranth (Rajgira)",
+  "Browntop",
+  "Little",
+  "Buckwheat",
+  "Amaranth",
   "Kodo",
-  "Barnyard (Sanwa)",
-  "Proso (Chena/Barri)",
+  "Barnyard",
+  "Proso",
 ];
 
 export const recipes = ["First Recipe", "Second Recipe"];
 export const categories = ["Environment", "Health", "Beauty"];
 
 export const typesSecondary = [
-  { title: "Pearl (Bajra)", value: "Pearl (Bajra)" },
-  { title: "Sorghum (Jowar)", value: "Sorghum (Jowar)" },
-  { title: "Foxtail (Kakum/Kangni)", value: "Foxtail (Kakum/Kangni)" },
-  { title: "Finger (Ragi)", value: "Finger (Ragi)" },
+  { title: "Pearl", value: "Pearl" },
+  { title: "Sorghum", value: "Sorghum" },
+  { title: "Foxtail", value: "Foxtail" },
+  { title: "Finger", value: "Finger" },
   { title: "Fonio", value: "Fonio" },
-  { title: "Browntop (Korle)", value: "Browntop (Korle)" },
-  { title: "Little (Moraiyo)", value: "Little (Moraiyo)" },
-  { title: "Buckwheat (Kuttu)", value: "Buckwheat (Kuttu)" },
-  { title: "Amaranth (Rajgira)", value: "Amaranth (Rajgira)" },
+  { title: "Browntop", value: "Browntop" },
+  { title: "Little", value: "Little" },
+  { title: "Buckwheat", value: "Buckwheat" },
+  { title: "Amaranth", value: "Amaranth" },
   { title: "Kodo", value: "Kodo" },
-  { title: "Barnyard (Sanwa)", value: "Barnyard (Sanwa)" },
-  { title: "Proso (Chena/Barri)", value: "Proso (Chena/Barri)" },
+  { title: "Barnyard", value: "Barnyard" },
+  { title: "Proso", value: "Proso" },
 ];
 
 export const products = ["Cereal", "Pasta", "Gluten Free Grains", "Pancakes"];
