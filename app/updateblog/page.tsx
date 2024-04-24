@@ -1,6 +1,7 @@
 import { SecondaryHero, UpdateFormBlog } from "@/components";
 import { BlogPostDetailsProps } from "@/types";
 import { addBlogPosts } from "@/utils";
+import Image from "next/image";
 import React from "react";
 
 export default function updateblog() {

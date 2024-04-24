@@ -351,16 +351,28 @@ const UpdateForm = ({ handleClick }: UpdateButtonProps) => {
             {productDescription || "Markdown preview"}
           </ReactMarkdown>
         </div>
-
         {errors.productDescription && (
           <span className="error-message">
             {errors.productDescription.message}
           </span>
         )}
+        <div className="p-5 shadow-lg rounded-lg w-full bg-primary-millet-100 text-primary-brown border-primary-millet-200 border placeholder-primary-brown-500">
+          <p className="text-[18px]">Markdown Guide</p>
+          <h1># Heading 1</h1>
+          <h2>## Heading 2</h2>
+          <i>*italics*</i> or <i>_italics_</i>
+          <br />
+          <b>**bold**</b> or <b>__bold__</b>
+          <br />
+          <p>- list item or * list item or 1. list item</p>
+          <p>![Image title](Image URL)</p>
+          <p>[Link title](Link URL)</p>
+          <p> &gt; Block Quote</p>
+        </div>
         <button
           disabled={disabled}
           type="submit"
-          className={`p-[16px] w-full border border-primary-brown bg-primary-brown text-primary-wheat-100 font-bold text-lg rounded-full hover:bg-primary-wheat-100 hover:text-primary-brown transition-all duration-500 flex-1`}
+          className={`p-[16px] w-full border border-primary-brown bg-primary-brown text-primary-wheat-100 font-bold text-lg rounded-full enabled:hover:bg-primary-wheat-100 enabled:hover:text-primary-brown disabled:bg-primary-wheat-100 disabled:text-primary-brown disabled:opacity-75 transition-all duration-500 flex-1`}
         >
           Submit
         </button>

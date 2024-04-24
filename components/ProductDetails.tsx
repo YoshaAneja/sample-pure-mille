@@ -33,9 +33,6 @@ const ProductDetails = ({
   const [activeImage, setActiveImage] = useState(
     String(product.primary_image_url)
   );
-  const [lastActiveImage, setLastActiveImage] = useState(
-    String(product.secondary_images) ? [0] : ""
-  );
 
   return (
     <>
@@ -101,7 +98,6 @@ const ProductDetails = ({
                                 priority
                                 className="object-contain cursor-pointer"
                                 onClick={() => {
-                                  setLastActiveImage(activeImage);
                                   setActiveImage(secondaryImage);
                                 }}
                                 src={secondaryImage}

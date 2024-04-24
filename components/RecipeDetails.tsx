@@ -74,11 +74,14 @@ const RecipeDetails = ({
                   <div className="flex-1 flex flex-col gap-3">
                     <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
                       <Image
-                        src={activeImage}
+                        src={activeImage || "/.png"}
                         alt="millets"
                         fill
                         priority
                         className="object-contain"
+                        onClick={() => {
+                          setActiveImage(recipe.primary_image || "");
+                        }}
                       />
                     </div>
                     <div className="flex gap-3">
@@ -92,6 +95,9 @@ const RecipeDetails = ({
                                 fill
                                 priority
                                 className="object-contain"
+                                onClick={() => {
+                                  setActiveImage(secondaryImage);
+                                }}
                               />
                             </div>
                           );

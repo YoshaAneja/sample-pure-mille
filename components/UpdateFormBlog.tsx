@@ -90,7 +90,7 @@ const UpdateFormBlog = ({ handleClick }: BlogUpdateButtonProps) => {
     <div className="flex flex-col justify-center my-6 items-center">
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col gap-8 p-16 bg-primary-millet-100 shadow-md rounded-lg lg:max-w-[800px] max-md:mx-16"
+        className="flex flex-col gap-8 p-16 bg-primary-millet-100 shadow-md rounded-lg lg:w-[750px] max-md:mx-16"
       >
         <div className="-mb-4 text-primary-brown font-bold text-[18px]">
           Blog Post Title
@@ -209,10 +209,23 @@ const UpdateFormBlog = ({ handleClick }: BlogUpdateButtonProps) => {
         {errors.content && (
           <span className="error-message">{errors.content.message}</span>
         )}
+        <div className="p-5 shadow-lg rounded-lg w-full bg-primary-millet-100 text-primary-brown border-primary-millet-200 border placeholder-primary-brown-500">
+          <p className="text-[18px]">Markdown Guide</p>
+          <h1># Heading 1</h1>
+          <h2>## Heading 2</h2>
+          <i>*italics*</i> or <i>_italics_</i>
+          <br />
+          <b>**bold**</b> or <b>__bold__</b>
+          <br />
+          <p>- list item or * list item or 1. list item</p>
+          <p>![Image title](Image URL)</p>
+          <p>[Link title](Link URL)</p>
+          <p> &gt; Block Quote</p>
+        </div>
         <button
           disabled={disabled}
           type="submit"
-          className={`p-[16px] w-full border border-primary-brown bg-primary-brown text-primary-wheat-100 font-bold text-lg rounded-full hover:bg-primary-wheat-100 hover:text-primary-brown transition-all duration-500 flex-1`}
+          className={`p-[16px] w-full border border-primary-brown bg-primary-brown text-primary-wheat-100 font-bold text-lg rounded-full enabled:hover:bg-primary-wheat-100 enabled:hover:text-primary-brown disabled:bg-primary-wheat-100 disabled:text-primary-brown disabled:opacity-75 transition-all duration-500 flex-1`}
         >
           Submit
         </button>
