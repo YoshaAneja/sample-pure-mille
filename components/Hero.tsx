@@ -57,7 +57,7 @@ const Hero = () => {
           animate="animate"
           variants={videoAnimation}
         >
-          <source src="/pure mille sample video.mp4" type="video/mp4" />
+          <source src="/pure_mille_lowres.mp4" type="video/mp4" />
           Your browser does not support the video.
         </motion.video>
       </div>

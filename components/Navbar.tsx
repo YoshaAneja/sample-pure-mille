@@ -34,7 +34,7 @@ const Navbar = () => {
           <Image
             src="/logo.png"
             alt="Pure Millé Logo"
-            width={150}
+            width={120}
             height={18}
             className="object-contain"
           />
