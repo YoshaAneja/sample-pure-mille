@@ -30,13 +30,13 @@ const RecipeCard = ({ recipe, milletType }: RecipeCardProps) => {
       <div className="recipe-card__content">
         <h2 className="recipe-card__content-title">{title}</h2>
       </div>
-      <div className="relative w-full h-40 my-3 object-contain">
+      <div className="relative w-full h-56 my-3 object-contain">
         <Image
           src={primary_image || "/placeholder-img.png"}
           alt={title}
           fill
           priority
-          className="object-contain"
+          className="object-cover rounded-2xl"
         />
       </div>
       <div className="relative flex w-full mt-2 flex-col gap-5">

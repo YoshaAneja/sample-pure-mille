@@ -5,8 +5,9 @@ import React, { Fragment, useState } from "react";
 import Image from "next/image";
 
 import { Dialog, Transition } from "@headlessui/react";
-import MDEditor from "@uiw/react-md-editor";
 var XMLHttpRequest = require("xhr2");
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface RecipeDetailsProps {
   isOpen: boolean;
@@ -72,13 +73,13 @@ const RecipeDetails = ({
                     />
                   </button>
                   <div className="flex-1 flex flex-col gap-3">
-                    <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
+                    <div className="relative w-full h-56 bg-pattern bg-cover bg-center rounded-2xl">
                       <Image
                         src={activeImage || "/.png"}
                         alt="millets"
                         fill
                         priority
-                        className="object-contain"
+                        className="object-cover rounded-2xl"
                         onClick={() => {
                           setActiveImage(recipe.primary_image || "");
                         }}
@@ -86,7 +87,10 @@ const RecipeDetails = ({
                     </div>
                     <div className="flex gap-3">
                       {recipe.secondary_images?.map((secondaryImage) => {
-                        if (checkImageExists(secondaryImage)) {
+                        if (
+                          checkImageExists(secondaryImage) &&
+                          secondaryImage !== ""
+                        ) {
                           return (
                             <div className="flex-1 relative w-full h-24 bg-primary-millet-100">
                               <Image
@@ -105,32 +109,24 @@ const RecipeDetails = ({
                       })}
                     </div>
                   </div>
-                  <div className="flex-1 flex flex-col gap-2">
-                    <h2 className="font-semibold text-xl capitalize">
+                  <div className="flex-1 flex flex-col gap-4">
+                    <h2 className="font-extrabold text-[24px]">
                       {recipe.title}
                     </h2>
                     <h3>Cooking Time: {recipe.cooking_time}</h3>
-                    <h3 className="mt-[20px]">Ingredients</h3>
-                    <ol className="list-decimal text-grey px-[30px]">
-                      {recipe.ingredients.map((ingredient) => (
-                        <li className="py-[3px]">{ingredient}</li>
-                      ))}
-                    </ol>
-                    <MDEditor.Markdown
-                      source={recipe.instructions}
-                      style={{
-                        background: "white",
-                        color: "grey",
-                      }}
-                    />
+                    <ReactMarkdown
+                      className="markdown leading-7"
+                      remarkPlugins={[remarkGfm]}
+                    >
+                      {recipe.instructions}
+                    </ReactMarkdown>
                     <div className="flex flex-wrap gap-4">
                       <div>
-                        <h4 className="text-primary-brown capitalize font-bold mb-2 mt-[20px]">
+                        <h4 className="text-primary-brown font-bold mb-2 text-[20px]">
                           Made with: {milletType.millet_type} Millet
                         </h4>
-                        <p className="text-grey">
-                          {milletType.millet_description}
-                        </p>
+                        <br />
+                        <p>{milletType.millet_description}</p>
                       </div>
                     </div>
                   </div>

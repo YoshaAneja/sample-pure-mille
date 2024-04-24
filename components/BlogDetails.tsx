@@ -5,8 +5,9 @@ import React, { Fragment } from "react";
 import Image from "next/image";
 
 import { Dialog, Transition } from "@headlessui/react";
-import MDEditor from "@uiw/react-md-editor";
 var XMLHttpRequest = require("xhr2");
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface BlogDetailsProps {
   isOpen: boolean;
@@ -64,29 +65,28 @@ const BlogDetails = ({ isOpen, closeModal, blogPost }: BlogDetailsProps) => {
                     />
                   </button>
                   <div className="flex-1 flex flex-col gap-3">
-                    <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
+                    <div className="relative w-full h-60">
                       <Image
                         src={blogPost.blog_image}
                         alt="millets"
                         fill
                         priority
-                        className="object-contain"
+                        className="object-cover rounded-2xl"
                       />
                     </div>
                   </div>
                   <div className="flex-1 flex flex-col gap-2">
-                    <h2 className="font-semibold text-xl capitalize">
+                    <h2 className="font-extrabold text-[24px]">
                       {blogPost.title}
                     </h2>
                     <h3>Author: {blogPost.author}</h3>
                     <h3>Tag: {blogPost.category}</h3>
-                    <MDEditor.Markdown
-                      source={blogPost.content}
-                      style={{
-                        background: "white",
-                        color: "grey",
-                      }}
-                    />
+                    <ReactMarkdown
+                      className="markdown leading-7"
+                      remarkPlugins={[remarkGfm]}
+                    >
+                      {blogPost.content}
+                    </ReactMarkdown>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>

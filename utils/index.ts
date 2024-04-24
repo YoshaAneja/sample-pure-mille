@@ -135,7 +135,7 @@ export async function addRecipe(recipeDetails: RecipeDetailsProps) {
       gluten_free: glutenFree,
       recipe_millet: recipeMillet,
       cooking_time: String(cookingTime) + " minutes",
-      primary_image_url: primaryImageUrl,
+      primary_image: primaryImageUrl,
       secondary_images: secondaryImages,
       ingredients: ingredients,
     },

@@ -19,18 +19,32 @@ const BlogCard = ({ blogPost }: BlogCardProps) => {
       <div className="recipe-card__content">
         <h2 className="recipe-card__content-title">{title}</h2>
       </div>
-      <div className="relative w-full h-40 my-3 object-contain">
+      <div className="relative w-full my-3 object-contain h-56">
         <Image
           src={blog_image || "/placeholder-img.png"}
           alt={title}
           fill
           priority
-          className="object-contain"
+          className="object-cover rounded-2xl"
         />
       </div>
-      <div className="relative flex w-full mt-2 flex-col gap-5">
-        <div className="flex g w-full justify-between text-gray">
-          Tag: {category}
+      <div className="relative flex w-full my-2 flex-col gap-5">
+        <div className="flex g w-full flex-start text-primary-brown gap-2">
+          {category === "Health" && (
+            <Image src="/millet.svg" width={20} height={20} alt="Millet icon" />
+          )}
+          {category === "Environment" && (
+            <Image
+              src="/environment.svg"
+              width={20}
+              height={20}
+              alt="Environment icon"
+            />
+          )}
+          {category === "Beauty" && (
+            <Image src="/beauty.svg" width={20} height={20} alt="Beauty icon" />
+          )}
+          {category}
         </div>
 
         <div className="recipe-card__btn-container">

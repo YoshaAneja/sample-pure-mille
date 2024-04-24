@@ -37,7 +37,7 @@ const SecondaryHero = ({
             <motion.div className="hero__title mt-10" variants={riseWithFade}>
               {title}
             </motion.div>
-            <div className="leading-[150%] lg:max-w-[55vw] min-w-[250px] hero__subtitle md:self-end">
+            <div className="leading-[150%] lg:max-w-[57vw] min-w-[250px] hero__subtitle md:self-end">
               <AnimatedWords title={subtitle} />
             </div>
             {subtitle2 && (

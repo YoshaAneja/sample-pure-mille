@@ -115,7 +115,7 @@ const UpdateForm = ({ handleClick }: UpdateButtonProps) => {
     <div className="flex flex-col justify-center my-6 items-center">
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col gap-8 p-16 bg-primary-millet-100 shadow-md rounded-lg lg:max-w-[800px] max-md:mx-16"
+        className="flex flex-col gap-8 p-16 bg-primary-millet-100 shadow-md rounded-lg lg:max-w-[700px] max-w-[700px] max-md:mx-16"
       >
         <div className="-mb-4 text-primary-brown font-bold text-[18px]">
           Product Name
