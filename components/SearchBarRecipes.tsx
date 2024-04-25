@@ -19,7 +19,11 @@ const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
   </button>
 );
 
-const SearchBarRecipes = () => {
+const SearchBarRecipes = ({
+  allRecipeNames,
+}: {
+  allRecipeNames: Array<string>;
+}) => {
   const [titleContains, setTitleContains] = useState("");
   const router = useRouter();
 
@@ -53,6 +57,7 @@ const SearchBarRecipes = () => {
         <SearchRecipe
           titleContains={titleContains}
           setTitleContains={setTitleContains}
+          allRecipeNames={allRecipeNames}
         />
         <SearchButton otherClasses="" />
       </div>

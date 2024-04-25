@@ -33,7 +33,7 @@ const SearchProduct = ({ product, setProduct }: SearchProductProps) => {
           </Combobox.Button>
           <Combobox.Input
             className="search-product__input"
-            placeholder="Cereal"
+            placeholder="Product Type"
             displayValue={(product: string) => product}
             onChange={(e) => setQuery(e.target.value)}
           />

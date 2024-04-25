@@ -32,7 +32,7 @@ const SearchType = ({ type, setType }: SearchTypeProps) => {
           </Combobox.Button>
           <Combobox.Input
             className="search-type__input"
-            placeholder="Pearl"
+            placeholder="Millet Type"
             displayValue={(type: string) => type}
             onChange={(e) => setQuery(e.target.value)}
           />

@@ -20,7 +20,7 @@ export async function fetchMilletProducts(filters: FilterProps) {
       database: "sample_millets",
       dataSource: "PureMille",
       filter: {
-        millet_types: type,
+        millet_type: type,
         product_type: product,
         gluten_free: gluten_free,
         price: { $lte: Number(price) },
@@ -33,7 +33,7 @@ export async function fetchMilletProducts(filters: FilterProps) {
       database: "sample_millets",
       dataSource: "PureMille",
       filter: {
-        millet_types: type,
+        millet_type: type,
         product_type: product,
         gluten_free: gluten_free,
       },

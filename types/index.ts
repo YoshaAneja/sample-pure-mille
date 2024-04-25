@@ -33,6 +33,7 @@ export interface SearchTypeProps {
 export interface SearchRecipeProps {
   titleContains: string;
   setTitleContains: (titleContains: string) => void;
+  allRecipeNames: Array<string>;
 }
 
 export interface SearchProductProps {

@@ -9,12 +9,13 @@ import { recipes } from "@/constants";
 const SearchRecipe = ({
   titleContains,
   setTitleContains,
+  allRecipeNames,
 }: SearchRecipeProps) => {
   const [query, setQuery] = useState("");
   const filteredRecipes =
     query === ""
-      ? recipes
-      : recipes.filter((recipe) =>
+      ? allRecipeNames
+      : allRecipeNames.filter((recipe) =>
           recipe
             .toLowerCase()
             .replace(/\s+/g, "")
@@ -35,7 +36,7 @@ const SearchRecipe = ({
           </Combobox.Button>
           <Combobox.Input
             className="search-type__input"
-            placeholder="Pearl Millet Pasta"
+            placeholder="Stir Fry"
             displayValue={(type: string) => type}
             onChange={(e) => setQuery(e.target.value)}
           />

@@ -17,6 +17,10 @@ export default async function Recipes({ searchParams }: any) {
     gluten_free: searchParams.gluten_free,
   });
   const allRecipes = allRecipesDocuments.documents;
+  const allRecipeNames: Array<string> = [];
+  allRecipes.map((recipeName: any) => {
+    allRecipeNames.push(recipeName.title);
+  });
 
   const isDataEmpty =
     !Array.isArray(allRecipes) || allRecipes.length < 1 || !allRecipes;
@@ -35,7 +39,7 @@ export default async function Recipes({ searchParams }: any) {
           <h2>Explore all our recipes</h2>
         </div>
         <div className="home__filters">
-          <SearchBarRecipes />
+          <SearchBarRecipes allRecipeNames={allRecipeNames} />
           <div className="home__filter-container">
             <CustomToggle />
             <CustomFilterRecipes
